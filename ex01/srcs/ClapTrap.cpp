@@ -25,31 +25,31 @@ ClapTrap::~ClapTrap(){
 void ClapTrap::attack(const std::string &target){
     if ((this->_HP > 0) & (this->_EP > 0)){
         this->_EP--;
-        std::cout << "ClapTrap " << _Name << " attacks " << target << ", causing " << _ATK << " points of damage!" << std::endl;
+        std::cout << _Name << " attacks " << target << ", causing " << _ATK << " points of damage!" << std::endl;
         return ;
     }
-    std::cout << "No more ressources for any acions." << std::endl;
+    std::cout << "No more ressources for any actions." << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount){
     if (this->_HP <= 0){
-        std::cout << "Stop he's already dead..." << std::endl;
+        std::cout << "Stop its already dead..." << std::endl;
         return ;
     }
     this->_HP = this->_HP - amount;
     if (this->_HP <= 0){
-        std::cout << "Clap Trap dead." << std::endl;
+        std::cout << _Name << " dead." << std::endl;
         return ;
     }
-    std::cout << "Clap Trap took " << amount << " damage. Remaining HP / EP: " << this->_HP << " / " << this->_EP << std::endl;
+    std::cout << _Name << " took " << amount << " damage. Remaining HP / EP: " << this->_HP << " / " << this->_EP << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount){
     if ((this->_EP > 0) & (this->_HP > 0)){
         this->_EP--;
         this->_HP += amount;
-        std::cout << "Clap Trap healed itself +" << amount << "HP. Remaining HP / EP: " << this->_HP << " / " << this->_EP << std::endl;
+        std::cout << _Name << " healed itself +" << amount << "HP. Remaining HP / EP: " << this->_HP << " / " << this->_EP << std::endl;
         return ;
     }
-    std::cout << "No more ressources for any acions." << std::endl;
+    std::cout << "No more ressources for any actions." << std::endl;
 }

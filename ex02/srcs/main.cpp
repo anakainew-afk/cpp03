@@ -1,14 +1,26 @@
-#include "../includes/ClapTrap.hpp"
+#include "../includes/FragTrap.hpp"
 
-int main(){
+int	main(){
 
-    ClapTrap a("Bulldozer");
-    a.attack("dummy");
+	std::cout << "ClapTrap\n" << std::endl;
 
-    a.takeDamage(1);
-    a.attack("dummy2");
+	ClapTrap b("Cody");
+	b.beRepaired(3);
+	b.attack("Cody-clone");
+	b.beRepaired(3);
 
-    a.beRepaired(2);
+	std::cout << "\nScavTrap\n" << std::endl;
 
-    return 0;
+	ScavTrap d("John");
+	d.attack("John-clone");
+	d.takeDamage(101);
+	d.takeDamage(15);
+	d.attack("ScavTrap-clone");
+
+	std::cout << "\nFragTrap\n" << std::endl;
+
+	FragTrap f("Mike");
+	f.highFivesGuys();
+
+	return (0);
 }
