@@ -28,7 +28,7 @@ void ScavTrap::attack(const std::string &target){
         std::cout << "ScavTrap " << _Name << " attacks " << target << ", causing " << _ATK << " points of damage!" << std::endl;
         return ;
     }
-    std::cout << "No more ressources for any acions." << std::endl;
+    std::cout << "No more ressources for any actions." << std::endl;
 }
 
 void ScavTrap::takeDamage(unsigned int amount){
@@ -51,7 +51,7 @@ void ScavTrap::beRepaired(unsigned int amount){
         std::cout << "Scav Trap healed itself +" << amount << "HP. Remaining HP / EP: " << this->_HP << " / " << this->_EP << std::endl;
         return ;
     }
-    std::cout << "No more ressources for any acions." << std::endl;
+    std::cout << "No more ressources for any actions." << std::endl;
 }
 
 void ScavTrap::guardGate(){

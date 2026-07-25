@@ -28,7 +28,7 @@ void ClapTrap::attack(const std::string &target){
         std::cout << "ClapTrap " << _Name << " attacks " << target << ", causing " << _AD << " points of damage!" << std::endl;
         return ;
     }
-    std::cout << "No more ressources for any acions." << std::endl;
+    std::cout << "No more ressources for any actions." << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount){
@@ -51,5 +51,5 @@ void ClapTrap::beRepaired(unsigned int amount){
         std::cout << "Clap Trap healed itself +" << amount << "HP. Remaining HP / EP: " << this->_HP << " / " << this->_EP << std::endl;
         return ;
     }
-    std::cout << "No more ressources for any acions." << std::endl;
+    std::cout << "No more ressources for any actions." << std::endl;
 }

@@ -13,7 +13,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.cpp includes/ClapTrap.hpp
+%.o: %.cpp includes/ScavTrap.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
